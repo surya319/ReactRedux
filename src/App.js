@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useSelector, useDispatch } from "react-redux";
-// import "./App.css";
 import { getUsers } from "./Redux/userSlice";
 import { useEffect } from "react";
 import Profile from "./Profile";
@@ -13,9 +12,14 @@ function App() {
     dispatch(getUsers());
   }, []);
   return (
-    <div className="App" style={{ padding: "3rem" }}>
+    <div className="App position-relative" style={{ padding: "3rem" }}>
       {loading ? (
-        "Loading..."
+        <div
+          className="spinner-border text-primary position-absolute top-50 start-50"
+          role="status"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
       ) : (
         <div>
           {users.map((user) => {
