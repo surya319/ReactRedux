@@ -6,7 +6,6 @@ export const getUsers = createAsyncThunk("gets/getUsers", async () => {
     return response.data;
   });
 });
-// console.log(getUsers);
 export const userSlice = createSlice({
   name: "User Slice",
   initialState: {
