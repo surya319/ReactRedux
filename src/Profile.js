@@ -6,7 +6,7 @@ export default function Profile() {
  
   return (
     <div>
-      <h4>Name:{profileData.name}</h4>
+      <h4>UserName:{profileData.name}</h4>
       <h4>Age:{profileData.age}</h4>
       <h4>Email:{profileData.email}</h4>
     </div>
